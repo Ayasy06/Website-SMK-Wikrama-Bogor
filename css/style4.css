@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Times New Roman', Times, serif;
+    overflow-x: hidden;
+}
+nav {
+    display: flex;
+    justify-content: space-around;
+    height: 60px;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    background-color: rgb(16, 99, 150);
+} 
+nav .container{
+    font-family: 'Oooh Baby', cursive;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+.container img {
+    width: 50px;
+    height: 50px;
+    padding-right: 5px;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    width: 40%;
+    justify-content: space-between;
+    font-family: 'Vujahday Script', cursive;
+    padding-bottom: 24px;
+}
+nav ul li a:hover {
+    color: blue;
+}
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+.toggle {
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+}
+.toggle input {
+    position:absolute;
+    width: 48px;
+    height: 28px;
+    left: -5px;
+    top: -3px;
+    height: 28px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+.toggle span {
+    display:block;
+    width: 28px;
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
+    transition: all 0.5s;
+}
+.toggle span:nth-child(2) {
+    transform-origin: 0 0;
+}
+.toggle span:nth-child(4) {
+    transform-origin: 0 100%;
+}
+.toggle input:checked ~ span:nth-child(2) {
+    background-color: white;
+    transform: rotate(45deg) translate(-1px, -1px);
+}
+.toggle input:checked ~ span:nth-child(4) {
+    background-color: white;
+    transform: rotate(-45deg) translate(-1px, 0);
+}
+.toggle input:checked ~ span:nth-child(3) {
+    opacity: 0;
+    transform: scale(0);
+}
+@media screen and (max-width: 768px) {
+    nav ul{
+        width: 50%;
+    }
+}
+@media screen and (max-width: 576px) {
+    .container h2 {
+        font-size: 15px;
+    }
+    .toggle {
+        display: flex;
+    }
+    nav ul{
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 70%;
+        height: 100vh;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        z-index: 0;
+        transform: translateX(100%);
+        transition: all 1s;
+        opacity: 0;
+        background-color: rgb(16, 99, 150);
+    }
+    nav ul.slide {
+        opacity: 1;
+        transform: translateX(0)
+    }
+    .contact {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    .contact .sosial-media {
+        padding-bottom: 50px;
+    }
+    .contact .tentang-wikrama {
+        padding-bottom: 50px;
+    }
+}
+.menu {
+    width: 100%;
+    height: 50vh;
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+    background-size: 100%;
+    color: white;
+    background-image: url(../image/rpl-picsay.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    background-attachment: fixed;
+}
+.main-menu {
+    max-width: 100%;
+    height: auto;
+    padding: 50px;
+    align-items: center;
+    letter-spacing: 1px;
+    font-size: 19px;
+    font-weight: 500;
+    text-align: justify;
+    background-color: rgb(26, 110, 161);
+    color: rgb(212, 212, 212);
+    justify-content: center;
+}
+.main-menu p, h3, ul {
+    padding-top: 15px;
+}
+.main-menu ul {
+    list-style-position: inside;
+}
+.main-menu img {
+    width: 400px;
+    height: 400px;
+    align-items: center;
+    display: block;
+    margin: auto;
+}
+.main-menu ol {
+    list-style-position: inside ;
+}
+.contact {
+    border-top: 3px solid rgb(21, 120, 182) ;
+    background-color: rgb(16, 99, 150);
+    max-width: 100%;
+    height: auto;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+.contact ul li {
+    list-style: none;
+}
+.contact ul li a:hover {
+    color: blue;
+}
+.tentang-wikrama ul li {
+    margin-top: 7px;
+    margin-left: 35px;
+}
+.contact ul li a{
+    padding-top: 3px;
+    color: white;
+    font-size: 19px;
+}
+.contact .sosial-media img {
+    height: 28px;
+    width: 27px;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+.telepon .wa {
+    height: 30px;
+    width: 30px;
+    margin-right: 5px;
+    margin-top: 10px;
+}
